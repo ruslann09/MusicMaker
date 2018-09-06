@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgDark"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/record_music"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/record_dot" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/cycle_start_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/cycle_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/cycle_stop_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/delete_cycling" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/new_records_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/new_records" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pressing_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="120">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="200">
+
+            <ImageView
+                android:id="@+id/unpressed_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="200">
+
+            <ImageView
+                android:id="@+id/unpressed_9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_16"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="200">
+
+            <ImageView
+                android:id="@+id/unpressed_17"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_19"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_20"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_21"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_22"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_23"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_24"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="200">
+
+            <ImageView
+                android:id="@+id/unpressed_25"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_26"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_27"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_28"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_29"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_30"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_31"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/unpressed_32"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="12.5"
+                app:srcCompat="@drawable/cycling_unpressed_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical"></LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="60"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="horizontal"
+            android:weightSum="99">
+
+            <LinearLayout
+                android:id="@+id/btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/yellow_btn"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/green_btn"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/green_btn"
+                android:orientation="vertical"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="horizontal"
+            android:weightSum="99">
+
+            <LinearLayout
+                android:id="@+id/btn_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/blue_btn"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/blue_btn"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/blue_btn"
+                android:orientation="vertical"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="horizontal"
+            android:weightSum="99">
+
+            <LinearLayout
+                android:id="@+id/btn_7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/pink_btn"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/pink_btn"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/pink_btn"
+                android:orientation="vertical"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="horizontal"
+            android:weightSum="99">
+
+            <LinearLayout
+                android:id="@+id/btn_10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/red_btn"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/yellow_btn"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="33"
+                android:background="@drawable/red_btn"
+                android:orientation="vertical"></LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ad_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="19"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+</LinearLayout>

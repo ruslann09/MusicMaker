@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#21242c</color>
+    <color name="colorPrimaryDark">#21242c</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="bgDark">#21242c</color>
+
+    <color name="unpressed_cycling">#0f1015</color>
+    <color name="pressed_cycling">#464749</color>
+    <color name="control_main_cycle">#f79f24</color>
+
+    <color name="soundsLoaderBackground">#26272e</color>
+    <color name="soundsLoaderInitRow">#2e2f38</color>
+    <color name="soundsLoaderInitRowExecutorName">#00FFFF</color>
+
+    <color name="yellowBtnStart">#ff8000</color>
+    <color name="yellowBtnEnd">#b95d00</color>
+
+    <color name="greenStart">#88ff00</color>
+    <color name="greenBtnEnd">#5eaf00</color>
+
+    <color name="blueBtnStart">#00a6ff</color>
+    <color name="blueBtnEnd">#006ea9</color>
+
+    <color name="pinkBtnStart">#dd00ff</color>
+    <color name="pinkBtnEnd">#8a009f</color>
+
+    <color name="redBtnStart">#ff4400</color>
+    <color name="redBtnEnd">#9f2b00</color>
+</resources>
