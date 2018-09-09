@@ -49,8 +49,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -215,8 +220,7 @@ public class MainActivity extends AppCompatActivity
                     soundPool.play(sounds[0], 1.0f, 1.0f, 0, 0, 1.0f);
 
                     if (isRecordingStart)
-                        audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                                + getResources().getString(R.string.app_name) + "/raw/1.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                        audioRecording.addSound(0, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                     if (isCyclingStarted && isCyclingPanelShowed) {
                         cyclingSounds.put(currentPosition, sounds[0]);
@@ -234,8 +238,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[1], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/2.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(1, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[1]);
@@ -250,8 +253,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[2], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/3.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(2, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[2]);
@@ -266,8 +268,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[3], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/4.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(3, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[3]);
@@ -282,8 +283,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[4], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/5.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(4, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[4]);
@@ -298,8 +298,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[5], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/6.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(5, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[5]);
@@ -314,8 +313,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[6], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/7.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(6, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[6]);
@@ -330,8 +328,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[7], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/8.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(7, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[7]);
@@ -346,8 +343,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[8], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/9.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(8, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[8]);
@@ -362,8 +358,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[9], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/10.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(9, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[9]);
@@ -378,8 +373,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[10], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/11.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(10, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[10]);
@@ -394,8 +388,7 @@ public class MainActivity extends AppCompatActivity
                 soundPool.play(sounds[11], 1.0f, 1.0f, 0, 0, 1.0f);
 
                 if (isRecordingStart)
-                    audioRecording.addSound(Environment.getExternalStorageDirectory() + "/"
-                            + getResources().getString(R.string.app_name) + "/raw/12.wav", System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
+                    audioRecording.addSound(11, System.currentTimeMillis() - CURRENT_RECORDING_TIMESTAMP);
 
                 if (isCyclingStarted && isCyclingPanelShowed) {
                     cyclingSounds.put(currentPosition, sounds[11]);
@@ -491,12 +484,20 @@ public class MainActivity extends AppCompatActivity
 //                                }
 
                                 audioRecording.setRecordName(Environment.getExternalStorageDirectory() + "/"
-                                        + getResources().getString(R.string.app_name) + "/" + userInput.getText().toString());
+                                        + getResources().getString(R.string.app_name) + "/records/" + userInput.getText().toString() + ".txt");
 
-                                audioRecording.loadSoundFile(getApplicationContext());
+//                                audioRecording.loadSoundFile(getApplicationContext());
 
                                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
                                     createRecordsListView();
+
+                                GsonBuilder builder = new GsonBuilder();
+                                Gson gson = builder.create();
+                                String soundFile = gson.toJson(audioRecording);
+
+                                audioRecording.loadSoundFile(soundFile);
+
+                                createRecordsListView();
                             }
                         })
                 .setNegativeButton("Cancel",
@@ -675,7 +676,33 @@ public class MainActivity extends AppCompatActivity
         recordsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                playStart(getRecords().get(i).getPath());
+//                playStart(getRecords().get(i).getPath());
+
+                File file = new File(getRecords().get(i).getPath());
+
+                //Read text from file
+                StringBuilder text = new StringBuilder();
+
+                try {
+                    BufferedReader br = new BufferedReader(new FileReader(file));
+                    String line;
+
+                    while ((line = br.readLine()) != null) {
+                        text.append(line);
+                        text.append('\n');
+                    }
+                    br.close();
+                }
+                catch (IOException e) {
+                    //You'll need to add proper error handling here
+                }
+
+
+                GsonBuilder builder = new GsonBuilder();
+                Gson gson = builder.create();
+                audioRecording = gson.fromJson(text.toString(), AudioRecording.class);
+
+                audioRecording.playSound(MainActivity.this, soundPool, sounds);
             }
         });
 
@@ -687,42 +714,19 @@ public class MainActivity extends AppCompatActivity
         if (!outFileDirectory.exists())
             makeMainSoundSourceDir (getApplicationContext());
 
-        soundPool = new SoundPool(15, AudioManager.STREAM_MUSIC, 0);
+        soundPool = new SoundPool(50, AudioManager.STREAM_MUSIC, 0);
 
-        setAllSoundsUp("original");
+        sounds = setAllSoundsUp("original");
     }
 
-    private void setAllSoundsUp (String folderName) {
-        sounds = new int[12];
+    public int[] setAllSoundsUp (String folderName) {
+        int[] sounds = new int[12];
 
         for (int i = 0; i < 12; i++)
             sounds[i] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
                     + getResources().getString(R.string.app_name) + "/"+ folderName + "/" + (i+1) + ".wav", 1);
 
-//        sounds[0] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/1.wav", 1);
-//        sounds[1] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/2.wav", 1);
-//        sounds[2] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/3.wav", 1);
-//        sounds[3] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/4.wav", 1);
-//        sounds[4] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/5.wav", 1);
-//        sounds[5] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/6.wav", 1);
-//        sounds[6] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/7.wav", 1);
-//        sounds[7] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/8.wav", 1);
-//        sounds[8] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/9.wav", 1);
-//        sounds[9] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/10.wav", 1);
-//        sounds[10] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/11.wav", 1);
-//        sounds[11] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-//                + getResources().getString(R.string.app_name) + "/original/12.wav", 1);
+        return sounds;
     }
 
     class RecordsListView extends BaseAdapter {
@@ -788,7 +792,7 @@ public class MainActivity extends AppCompatActivity
 //                });
 
                 TextView recordName = (TextView) convertView.findViewById(R.id.record_name);
-                recordName.setText(arrayMyMatches.get(position).getName());
+                recordName.setText(arrayMyMatches.get(position).getName().substring(0, arrayMyMatches.get(position).getName().length() - 4));
             } catch (Exception e) {
                 Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
             } finally {
