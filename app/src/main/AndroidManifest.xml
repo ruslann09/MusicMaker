@@ -25,7 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SoundsLoaderPallete"></activity>
+        <activity android:name=".SoundsLoaderPallete" />
+        <activity android:name=".CustomConstructActivity"></activity>
     </application>
 
 </manifest>

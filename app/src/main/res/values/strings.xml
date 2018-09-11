@@ -9,4 +9,8 @@
     <string name="app_preferences">APP_PREFERENCES</string>
     <string name="default_music_mode">DEFAULT_MUSIC_MODE</string>
     <string name="original_mode">original</string>
+    <string name="green_color">green</string>
+    <string name="purple">purple</string>
+    <string name="blue">blue</string>
+    <string name="orange">orange</string>
 </resources>

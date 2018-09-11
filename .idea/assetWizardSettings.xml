@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_new_releases_black_24dp.xml" />
+                                                <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_open_in_new_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,9 +33,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="new_records" />
+                                      <entry key="outputName" value="construct_icon" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="e59b09" />
+                                      <entry key="themeColor" value="e51dac" />
                                     </map>
                                   </option>
                                 </PersistentState>

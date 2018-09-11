@@ -72,10 +72,7 @@ public class MainActivity extends AppCompatActivity
     private int REQUEST_CODE_PERMISSION_ACCESS_AUDIO_RECORDING = 1001;
     private int REQUEST_CODE_PERMISSION_ACCESS_EXTERNAL_STORAGE = 1002;
 
-    private LinearLayout btn_1, btn_2, btn_3,
-            btn_4, btn_5, btn_6,
-            btn_7, btn_8, btn_9,
-            btn_10, btn_11, btn_12;
+    private LinearLayout[] btns;
 
     private LinearLayout adBlock, pressingPanel;
     private ListView recordsList;
@@ -92,7 +89,7 @@ public class MainActivity extends AppCompatActivity
     private int[] sounds;
 
     private SoundPool soundPool;
-    private ImageView record_btn, cycle_start_arrow, cycle_stop_arrow, newRecords;
+    private ImageView record_btn, cycle_start_arrow, cycle_stop_arrow, newRecords, constructWindow;
 
     private MediaRecorder mediaRecorder;
     private MediaPlayer mediaPlayer;
@@ -102,17 +99,14 @@ public class MainActivity extends AppCompatActivity
     private AudioRecording audioRecording;
     private long CURRENT_RECORDING_TIMESTAMP;
 
+    private SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    REQUEST_CODE_PERMISSION_ACCESS_EXTERNAL_STORAGE);
-        } else {
-            createRecordsListView();
-        }
+        preferences = getSharedPreferences(getString(R.string.app_preferences), MODE_PRIVATE);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -133,6 +127,15 @@ public class MainActivity extends AppCompatActivity
         cycle_start_arrow = (ImageView) findViewById(R.id.cycle_start_arrow);
         cycle_stop_arrow = (ImageView) findViewById(R.id.cycle_stop_arrow);
         newRecords = (ImageView) findViewById(R.id.new_records_btn);
+        constructWindow = (ImageView) findViewById(R.id.construct_window);
+
+        constructWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent (getApplicationContext(), CustomConstructActivity.class));
+                finish();
+            }
+        });
 
         cyclingSounds = new HashMap<Integer, Integer>();
 
@@ -200,20 +203,31 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_1 = (LinearLayout) findViewById(R.id.btn_1);
-        btn_2 = (LinearLayout) findViewById(R.id.btn_2);
-        btn_3 = (LinearLayout) findViewById(R.id.btn_3);
-        btn_4 = (LinearLayout) findViewById(R.id.btn_4);
-        btn_5 = (LinearLayout) findViewById(R.id.btn_5);
-        btn_6 = (LinearLayout) findViewById(R.id.btn_6);
-        btn_7 = (LinearLayout) findViewById(R.id.btn_7);
-        btn_8 = (LinearLayout) findViewById(R.id.btn_8);
-        btn_9 = (LinearLayout) findViewById(R.id.btn_9);
-        btn_10 = (LinearLayout) findViewById(R.id.btn_10);
-        btn_11 = (LinearLayout) findViewById(R.id.btn_11);
-        btn_12 = (LinearLayout) findViewById(R.id.btn_12);
+        btns = new LinearLayout[12];
 
-        btn_1.setOnClickListener(new View.OnClickListener() {
+        btns[0] = (LinearLayout) findViewById(R.id.btn_1);
+        btns[1] = (LinearLayout) findViewById(R.id.btn_2);
+        btns[2] = (LinearLayout) findViewById(R.id.btn_3);
+        btns[3] = (LinearLayout) findViewById(R.id.btn_4);
+        btns[4] = (LinearLayout) findViewById(R.id.btn_5);
+        btns[5] = (LinearLayout) findViewById(R.id.btn_6);
+        btns[6] = (LinearLayout) findViewById(R.id.btn_7);
+        btns[7] = (LinearLayout) findViewById(R.id.btn_8);
+        btns[8] = (LinearLayout) findViewById(R.id.btn_9);
+        btns[9] = (LinearLayout) findViewById(R.id.btn_10);
+        btns[10] = (LinearLayout) findViewById(R.id.btn_11);
+        btns[11] = (LinearLayout) findViewById(R.id.btn_12);
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    REQUEST_CODE_PERMISSION_ACCESS_EXTERNAL_STORAGE);
+        } else {
+            createRecordsListView();
+        }
+
+        makeBtnsBackground();
+
+        btns[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -232,7 +246,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_2.setOnClickListener(new View.OnClickListener() {
+        btns[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[1], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -247,7 +261,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_3.setOnClickListener(new View.OnClickListener() {
+        btns[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[2], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -262,7 +276,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_4.setOnClickListener(new View.OnClickListener() {
+        btns[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[3], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -277,7 +291,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_5.setOnClickListener(new View.OnClickListener() {
+        btns[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[4], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -292,7 +306,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_6.setOnClickListener(new View.OnClickListener() {
+        btns[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[5], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -307,7 +321,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_7.setOnClickListener(new View.OnClickListener() {
+        btns[6].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[6], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -322,7 +336,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_8.setOnClickListener(new View.OnClickListener() {
+        btns[7].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[7], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -337,7 +351,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_9.setOnClickListener(new View.OnClickListener() {
+        btns[8].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[8], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -352,7 +366,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_10.setOnClickListener(new View.OnClickListener() {
+        btns[9].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[9], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -367,7 +381,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_11.setOnClickListener(new View.OnClickListener() {
+        btns[10].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[10], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -382,7 +396,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btn_12.setOnClickListener(new View.OnClickListener() {
+        btns[11].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundPool.play(sounds[11], 1.0f, 1.0f, 0, 0, 1.0f);
@@ -396,6 +410,13 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+    }
+
+    private void makeBtnsBackground () {
+        for (int i = 0; i < btns.length; i++) {
+            if (preferences.contains(String.valueOf(btns[i].getId()) + "_color"))
+                btns[i].setBackground(getResources().getDrawable(preferences.getInt(String.valueOf(btns[i].getId()) + "_color", R.drawable.blue_btn)));
+        }
     }
 
     public void recordStart() {
@@ -714,7 +735,7 @@ public class MainActivity extends AppCompatActivity
         if (!outFileDirectory.exists())
             makeMainSoundSourceDir (getApplicationContext());
 
-        soundPool = new SoundPool(50, AudioManager.STREAM_MUSIC, 0);
+        soundPool = new SoundPool(25, AudioManager.STREAM_MUSIC, 0);
 
         sounds = setAllSoundsUp("original");
     }
@@ -722,9 +743,15 @@ public class MainActivity extends AppCompatActivity
     public int[] setAllSoundsUp (String folderName) {
         int[] sounds = new int[12];
 
-        for (int i = 0; i < 12; i++)
-            sounds[i] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
-                    + getResources().getString(R.string.app_name) + "/"+ folderName + "/" + (i+1) + ".wav", 1);
+        for (int i = 0; i < 12; i++) {
+            if (preferences.contains(String.valueOf(btns[i].getId()) + "_sound")) {
+                sounds[i] = soundPool.load(preferences.getString(String.valueOf(btns[i].getId()) + "_sound", Environment.getExternalStorageDirectory() + "/"
+                        + getResources().getString(R.string.app_name) + "/" + folderName + "/" + (i + 1) + ".wav"), 1);
+            } else {
+                sounds[i] = soundPool.load(Environment.getExternalStorageDirectory() + "/"
+                        + getResources().getString(R.string.app_name) + "/" + folderName + "/" + (i + 1) + ".wav", 1);
+            }
+        }
 
         return sounds;
     }
