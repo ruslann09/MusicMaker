@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lessons">Уроки</string>
+    <string name="play">Играть</string>
+    <string name="score">Счет</string>
+    <string name="restart">Еще раз</string>
+    <string name="lesson">Урок</string>
+    <string name="get_more">Наберите 80 баллов или более чтобы перейти к следующему уроку</string>
+    <string name="next_lesson">Следующий урок</string>
+</resources>

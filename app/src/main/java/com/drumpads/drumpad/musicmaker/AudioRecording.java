@@ -1,6 +1,7 @@
 package com.drumpads.drumpad.musicmaker;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 
 import java.io.File;
@@ -23,8 +24,8 @@ public class AudioRecording implements Serializable {
         this.recordName = recordName;
     }
 
-    public void addSound (Integer id, Long time) {
-        recordMap.add(new SoundInit(id, time));
+    public void addSound (String src, Long time) {
+        recordMap.add(new SoundInit(src, time));
     }
 
     public void loadSoundFile (String output) {
@@ -54,7 +55,7 @@ public class AudioRecording implements Serializable {
         return recordMap;
     }
 
-    public void playSound (final Activity activity, final SoundPool soundPool, final int[] sounds) {
+    public void playSound (final Activity activity) {
         for (final SoundInit sound : recordMap) {
             new Thread(new Runnable() {
                 @Override
@@ -68,7 +69,22 @@ public class AudioRecording implements Serializable {
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            soundPool.play(sounds[sound.getId()], 1.0f, 1.0f, 0, 0, 1.0f);
+                            MediaPlayer mediaPlayer = new MediaPlayer();
+                            try {
+                                mediaPlayer.setDataSource(sound.getSrc());
+                                mediaPlayer.prepare();
+                                mediaPlayer.start();
+
+                                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                    @Override
+                                    public void onCompletion(MediaPlayer mediaPlayer) {
+                                        mediaPlayer.release();
+                                        mediaPlayer = null;
+                                    }
+                                });
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                         }
                     });
                 }

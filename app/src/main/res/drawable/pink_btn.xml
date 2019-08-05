@@ -3,14 +3,14 @@
     <item android:state_pressed="false">
         <shape android:shape="rectangle">
             <gradient android:startColor="@color/pinkBtnStart" android:endColor="@color/pinkBtnEnd" android:type="radial" android:angle="90" android:gradientRadius="50dp" />
-            <corners android:radius="10dp" />
+            <corners android:radius="5dp" />
         </shape>
     </item>
 
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <gradient android:startColor="@color/pinkBtnStart" android:endColor="@color/pinkBtnEnd" android:type="radial" android:angle="90" android:gradientRadius="100dp" />
-            <corners android:radius="10dp" />
+            <gradient android:startColor="@android:color/white" android:endColor="@color/pinkBtnWhite" android:type="radial" android:angle="90" android:gradientRadius="80dp" />
+            <corners android:radius="5dp" />
         </shape>
     </item>
 </selector>

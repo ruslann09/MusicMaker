@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lessons">レッスン</string>
+    <string name="play">遊びます</string>
+    <string name="score">スコア</string>
+    <string name="restart">再度試してください</string>
+    <string name="lesson">レッスン</string>
+    <string name="get_more">80以上のスコアで次のレッスンに進みます。</string>
+    <string name="next_lesson">次のレッスン</string>
+</resources>

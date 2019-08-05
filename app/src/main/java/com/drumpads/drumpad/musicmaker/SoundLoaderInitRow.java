@@ -1,12 +1,13 @@
 package com.drumpads.drumpad.musicmaker;
 
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-
 public class SoundLoaderInitRow {
-    private String name, executorName, reference;
-    private boolean isPremium;
-    private Bitmap icon;
+    private String name, executorName, reference, path;
+    private boolean isPremium, isDefault, isCustom, isDownloading;
+    private String icon;
+
+    public SoundLoaderInitRow(String path) {
+        this.path = path;
+    }
 
     public SoundLoaderInitRow(String name, String executorName, String reference, boolean isPremium) {
         this.name = name;
@@ -15,7 +16,7 @@ public class SoundLoaderInitRow {
         this.isPremium = isPremium;
     }
 
-    public SoundLoaderInitRow(String name, String executorName, String reference, boolean isPremium, Bitmap icon) {
+    public SoundLoaderInitRow(String name, String executorName, String reference, boolean isPremium, String icon) {
         this.name = name;
         this.executorName = executorName;
         this.reference = reference;
@@ -35,7 +36,7 @@ public class SoundLoaderInitRow {
         return isPremium;
     }
 
-    public Bitmap getIcon() {
+    public String getIcon() {
         return icon;
     }
 
@@ -51,7 +52,7 @@ public class SoundLoaderInitRow {
         isPremium = premium;
     }
 
-    public void setIcon(Bitmap icon) {
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 
@@ -61,5 +62,37 @@ public class SoundLoaderInitRow {
 
     public void setExecutorName(String executorName) {
         this.executorName = executorName;
+    }
+
+    public void setPath (String path) {
+        this.path = path;
+    }
+
+    public String getPath () {
+        return path;
+    }
+
+    public boolean isDefault() {
+        return isDefault;
+    }
+
+    public void setDefault(boolean aDefault) {
+        isDefault = aDefault;
+    }
+
+    public boolean isCustom() {
+        return isCustom;
+    }
+
+    public void setCustom(boolean custom) {
+        isCustom = custom;
+    }
+
+    public boolean isDownloading() {
+        return isDownloading;
+    }
+
+    public void setDownloading(boolean downloading) {
+        isDownloading = downloading;
     }
 }

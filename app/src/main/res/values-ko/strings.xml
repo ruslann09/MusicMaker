@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lessons">수업</string>
+    <string name="play">놀이</string>
+    <string name="score">점수</string>
+    <string name="restart">다시 시도하십시오.</string>
+    <string name="lesson">교훈</string>
+    <string name="get_more">80 점 이상을 받아 다음 공과로 진행하십시오.</string>
+    <string name="next_lesson">다음 강의</string>
+</resources>

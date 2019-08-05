@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lessons">Lições</string>
+    <string name="play">Toque</string>
+    <string name="score">Ponto</string>
+    <string name="restart">Tente novamente</string>
+    <string name="lesson">Lição</string>
+    <string name="get_more">Marque 80 ou mais para prosseguir para a próxima lição.</string>
+    <string name="next_lesson">Próxima lição</string>
+</resources>

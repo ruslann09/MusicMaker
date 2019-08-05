@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lessons">教训</string>
+    <string name="play">玩</string>
+    <string name="score">得分了</string>
+    <string name="restart">再试一次</string>
+    <string name="lesson">课</string>
+    <string name="get_more">得分80或更高以进入下一课。</string>
+    <string name="next_lesson">下一课</string>
+</resources>

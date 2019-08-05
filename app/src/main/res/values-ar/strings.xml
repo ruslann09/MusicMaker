@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lessons">الدروس</string>
+    <string name="play">لعب</string>
+    <string name="score">أحرز هدفا</string>
+    <string name="restart">حاول مرة أخرى</string>
+    <string name="lesson">درس</string>
+    <string name="get_more">النتيجة 80 أو أكثر للانتقال إلى الدرس التالي.</string>
+    <string name="next_lesson">الدرس التالي</string>
+</resources>

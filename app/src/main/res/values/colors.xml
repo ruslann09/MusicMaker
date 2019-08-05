@@ -1,31 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#21242c</color>
-    <color name="colorPrimaryDark">#21242c</color>
+    <color name="colorPrimary">#484848</color>
+    <color name="colorPrimaryDark">#484848</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="bgDark">#21242c</color>
+    <color name="bgDark">#484848</color>
 
     <color name="unpressed_cycling">#0f1015</color>
     <color name="pressed_cycling">#464749</color>
     <color name="control_main_cycle">#f79f24</color>
 
-    <color name="soundsLoaderBackground">#26272e</color>
+    <color name="transparent">#00fffefd</color>
+
+    <color name="soundsLoaderBackground">#282828</color>
     <color name="soundsLoaderInitRow">#2e2f38</color>
     <color name="soundsLoaderInitRowExecutorName">#00FFFF</color>
 
-    <color name="yellowBtnStart">#ff8000</color>
-    <color name="yellowBtnEnd">#b95d00</color>
+    <color name="yellowBtnStart">#F8DE52</color>
+    <color name="yellowBtnEnd">#e17a30</color>
+    <color name="yellowBtnWhite">#fdcfaf</color>
+
+    <color name="grayStart">#737373</color>
+    <color name="grayBtnEnd">#6c6c6c</color>
 
     <color name="greenStart">#88ff00</color>
     <color name="greenBtnEnd">#5eaf00</color>
 
-    <color name="blueBtnStart">#00a6ff</color>
-    <color name="blueBtnEnd">#006ea9</color>
+    <color name="blueBtnStart">#6A6FFA</color>
+    <color name="blueBtnEnd">#4930E1</color>
+    <color name="blueBtnWhite">#c4baff</color>
 
-    <color name="pinkBtnStart">#dd00ff</color>
-    <color name="pinkBtnEnd">#8a009f</color>
+    <color name="pinkBtnStart">#E083F8</color>
+    <color name="pinkBtnEnd">#D042F4</color>
+    <color name="pinkBtnWhite">#f3c4ff</color>
 
-    <color name="redBtnStart">#ff4400</color>
-    <color name="redBtnEnd">#9f2b00</color>
+    <color name="redBtnStart">#FB9C9C</color>
+    <color name="redBtnEnd">#FF5757</color>
+    <color name="redBtnWhite">#ffbdbd</color>
+
+    <color name="waveform_selected">#33b5e5</color>
+    <color name="waveform_unselected">#195a72</color>
+    <color name="waveform_unselected_bkgnd_overlay">#0a242d</color>
+    <color name="selection_border">#ffffff</color>
+    <color name="playback_indicator">#ffff66</color>
+    <color name="grid_line">#66ffffff</color>
+    <color name="timecode">#ddffffdd</color>
+    <color name="timecode_shadow">#aa000000</color>
+
+    <color name="type_bkgnd_alarm">#88880000</color>
+    <color name="type_bkgnd_ringtone">#88008888</color>
+    <color name="type_bkgnd_notification">#88666600</color>
+    <color name="type_bkgnd_music">#88000000</color>
+    <color name="type_bkgnd_unsupported">#88cccccc</color>
+
+    <color name="trans_black">#a90d0d0d</color>
 </resources>

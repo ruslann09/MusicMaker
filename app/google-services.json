@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "852247480316",
+    "firebase_url": "https://music-maker-d41af.firebaseio.com",
+    "project_id": "music-maker-d41af",
+    "storage_bucket": "music-maker-d41af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852247480316:android:ff3665093ae567d8",
+        "android_client_info": {
+          "package_name": "com.drumpads.drumpad.musicmaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852247480316-ks83o44fl5b4bmrhovg1emetbkn4a3cc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL1lddgyKpVNQkM7O9hyHaihFs8QoUrFc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

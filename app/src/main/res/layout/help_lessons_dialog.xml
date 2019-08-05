@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/starter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="67dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/help_play_button_1" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="168.58dp"
+        android:layout_height="223dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="78dp"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/help_lessons_arrow" />
+</RelativeLayout>
